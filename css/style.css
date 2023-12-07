@@ -12,7 +12,7 @@ body{
     padding: 0;
     color: black;
     font-weight: 300;
-    width: fit-content;
+    width: 100%;
 }
 img{
     width: 100%;
@@ -38,7 +38,7 @@ a.skip {
   
 a.skip:focus {
     position: relative;
-    top: 10px;
+    top: 0px;
   }
   
 *:focus{
@@ -97,7 +97,7 @@ li.nav_item:hover, li.nav_item:focus {
 /* ----------------------------------
 --------Overview-------------
 ----------------------------------*/
-.main_overview{
+.overview_container{
   background-color: #F0EEEE;
   margin-bottom: 50px;
   display: flex;
@@ -110,7 +110,7 @@ h1{
   font-size: 4em;
   margin: 0;
 }
-.main_overview p{
+.overview_container p{
   font-size: 22px;
   padding: 0px 20px 20px 20px;
   margin: 0;
@@ -122,7 +122,7 @@ h1{
 .button {
   background-color: #A4826C;
   border: none;
-  color: white;
+  color: black;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -137,20 +137,35 @@ a.margin-left-15px{
   margin-left: 15px;
 }
 
-.first-image img{
+.overview-image img{
   padding-bottom: 0px;
 }
-
-/* when height < 930, crop image to 300px, when height<840, hide image */
-/* .first-image {
-  height: 350px;
-  overflow: hidden;
-} */
 
 /* ----------------------------------
 --------Portfolio-------------
 ----------------------------------*/
+.section_container{
+  display: flex;
 
+}
+.proj_container{
+  padding: 0 1em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.proj_content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.proj_content *{
+  margin: 5px;
+}
+.proj_image img{
+  max-width: 500px;
+}
 
 /* ----------------------------------
 --------Footer-------------
@@ -181,22 +196,47 @@ h3{
 ----------------------------------
 ---------------------------------- */
 @media screen and (min-width: 768px) {
-  .main_overview{
+  .overview_container{
+    padding: 0 1em;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    align-items: center;
+  }
+  .overview_container>:nth-child(3){
+    justify-items: start;
   }
 
-  .first-image{
+  .overview-image{
     grid-column: 2;
     width: 50%;
   }
-  .title{
+  .overview-content{
     grid-row: 1;
     grid-column: 1;
   }
-  .squares{
-    grid-row:3;
+
+  .proj_container{
+    padding: 0 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin:5%
   }
 
+  .proj_content *{
+    margin: 5px;
+  }
+  .proj_content h2{
+    font-size: 270%;
+  }
+  .proj_content p{
+    font-size: 150%;
+  }
+  .proj_image img{
+    max-width: 100%;
+  }
 }
+
+
+
