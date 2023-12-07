@@ -8,39 +8,52 @@
     <title>RJ's Portfolio</title>
 </head>
 <body>
-    <a class="skip" href="#main ">Skip to Main Content</a >
-    <header class = "container-header container-flex flex-content-between">
+    <a class="skip" href="#main">Skip to Main Content</a>
+    <header class = "header" id = "home">
         <span class = "logo" ><a id = "logo" href = "index.html">RJ.</a></span>
         <nav>
             <ul class = "nav_links" id = "nav">
                 <li class = "nav_item"><a href="index.html">About</a></li>
-                <li class = "nav_item"><a href="portfolio.html">Portfolio</a></li>                
+                <li class = "nav_item"><a href="#projects">Portfolio</a></li>                
                 <li class = "nav_item"><a href="https://drive.google.com/file/d/1e4OXHBvm7AsMx3rHrJ9-j1Kzcl98ft_l/view?usp=drive_link" target="_blank">Resume</a></li>             
             </ul>
-          </nav>
+        </nav>
     </header>
-    <main class="container-main" id = "main">
-        <div class = "main_overview container-flex" id = 'main_overview'>
-            <div class = "first-image">
-                <img src="images/sophia.jpg" alt="Me infront of Bryce caynoe.">
-            </div>
-
-            <div class = "title">
+    <main class = "main_content" id = "main">
+    <div class = " overview_container">
+            <div class = "overview_content">
                 <h1>Hi, I'm Ruijie.</h1>
                 <p>An UX and HCI Researcher advocates human-center design. Currently, I am a student researcher at Homni Stroke Inc.</p>
+                    <a href="#projects" class="button margin-left-15px" >See my work</a>
+                    <a href="index.html" class="button margin-left-15px" >About Me</a>
             </div>
+            <div class = overview_image>
+                <img src="images/sophia.jpg" alt="Me infront of Bryce caynoe.">
+            </div>
+    </div>
 
-            <!-- <div class = "intro">
-                <p>An UX and HCI Researcher advocates human-center design. Currently, I am a student researcher at Homni Stroke Inc.</p>
-            </div>   -->
-            <div class = "squares">
-                <a href="portfolio.html" class="button margin-left-15px" >See my work</a>
-                <a href="index.html" class="button margin-left-15px" >About Me</a>
-            </div>         
+    <div class = "section_container proj_container"  id = "projects">
 
+        <div class = proj_image>
+            <img src="images/p1.jpg" alt="Me infront of Bryce caynoe.">
+        </div>    
+        <div class = "proj_content" id = "homni">
+                <h2>Homni Health</h2>
+                <p>An AI-based stroke diagnosis tool.</p>
+                    <a target="_blank" href="https://hxi.ucsd.edu/project/ubistroke/" class="button margin-left-15px" >View More</a>
         </div>
-    </main>
-    <footer class = "container-flex">
+        <div class = proj_image>
+            <img src="images/p2.jpg" alt="Me infront of Bryce caynoe.">
+        </div>
+        <div class = "proj_content" id = "unmapped">
+            <h2>Unmapped</h2>
+            <p>Remote XR collaboration.</p>
+            <a target="_blank" href="https://hxi.ucsd.edu/publication/johnson-2023-unmap/" class="button margin-left-15px" >View More</a>
+        </div>
+
+    </div>
+</main>
+    <footer class = "footer">
         <h3>ruuhuang@umich.edu</h3>
         <p class = "sentence">Always ready for the next user experience journey.</p>
         <div class="container-icons"> 
